@@ -6,12 +6,8 @@ body {
   margin: 40px auto;
   padding: 0 20px;
   line-height: 1.6;
-}
-h1 {
-  color: #4f8cff;
-}
 
-#miBoton {
+  #miBoton {
   background-color: #4f8cff;   /* color de fondo azul */
   color: white;                 /* texto en blanco */
   border: none;                 /* quitamos el borde gris feo */
@@ -26,3 +22,9 @@ h1 {
 #miBoton:hover {
   background-color: #3a6fd6;    /* un azul un poco más oscuro */
 }
+}
+h1 {
+  color: #4f8cff;
+}
+
+

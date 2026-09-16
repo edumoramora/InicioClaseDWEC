@@ -6,25 +6,25 @@ body {
   margin: 40px auto;
   padding: 0 20px;
   line-height: 1.6;
+}
 
-  #miBoton {
+#miBoton {
   background-color: #4f8cff;   /* color de fondo azul */
-  color: white;                 /* texto en blanco */
-  border: none;                 /* quitamos el borde gris feo */
-  padding: 12px 24px;           /* espacio interior: lo hace más grande */
-  font-size: 1rem;              /* tamaño de letra */
-  border-radius: 10px;          /* esquinas redondeadas */
-  cursor: pointer;              /* el ratón muestra una manita encima */
-  margin-top: 16px;             /* separación con el texto de arriba */
+  color: white;                  /* texto en blanco */
+  border: none;                  /* quitamos el borde gris feo */
+  padding: 12px 24px;            /* espacio interior: lo hace más grande */
+  font-size: 1rem;               /* tamaño de letra */
+  border-radius: 10px;           /* esquinas redondeadas */
+  cursor: pointer;               /* el ratón muestra una manita encima */
+  margin-top: 16px;              /* separación con el texto de arriba */
 }
 
 /* Efecto al pasar el ratón por encima */
 #miBoton:hover {
   background-color: #3a6fd6;    /* un azul un poco más oscuro */
 }
-}
+
 h1 {
   color: #4f8cff;
 }
-
 

@@ -7,6 +7,71 @@ body {
   padding: 0 20px;
   line-height: 1.6;
 }
+
+#miBoton {
+  background-color: #4f8cff;   /* color de fondo azul */
+  color: white;                  /* texto en blanco */
+  border: none;                  /* quitamos el borde gris feo */
+  padding: 12px 24px;            /* espacio interior: lo hace más grande */
+  font-size: 1rem;               /* tamaño de letra */
+  border-radius: 10px;           /* esquinas redondeadas */
+  cursor: pointer;               /* el ratón muestra una manita encima */
+  margin-top: 16px;              /* separación con el texto de arriba */
+}
+
+/* Efecto al pasar el ratón por encima */
+#miBoton:hover {
+  background-color: #3a6fd6;    /* un azul un poco más oscuro */
+}
+
 h1 {
   color: #4f8cff;
+}
+
+/* ---------- MENÚ PRINCIPAL ---------- */
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #171e2e;
+  padding: 14px 24px;
+  border-bottom: 2px solid #4f8cff;
+  margin: -40px -20px 24px -20px;
+}
+.menu__marca {
+  font-weight: bold;
+  color: #4f8cff;
+}
+.menu__lista {
+  display: flex;
+  gap: 10px;
+  list-style: none;   /* quita los puntos de la lista */
+  margin: 0;
+  padding: 0;
+}
+.menu__enlace {
+  color: #93a0b8;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;              /* necesario para poder agrandarlo */
+  transition: all 0.25s ease;         /* la clave: suaviza TODOS los cambios */
+}
+
+.menu__enlace:hover {
+  color: white;
+  background-color: #4f8cff;          /* se ilumina en azul */
+  transform: scale(1.2) translateY(-3px);  /* se agranda y sube un poco */
+  box-shadow: 0 6px 16px rgba(79, 140, 255, 0.5);  /* brillo/sombra azul debajo */
+}
+
+body.tema-claro {
+  background-color: #f0f2f7;
+  color: #1a1a2e;
+}
+body.tema-claro #menu {
+  background-color: #ffffff;
+}
+body.tema-claro h1 {
+  color: #2a5fd0;
 }

@@ -76,3 +76,47 @@ body.tema-claro #menu {
 body.tema-claro h1 {
   color: #2a5fd0;
 }
+
+
+/* --- Tabla de videojuegos (tema oscuro) --- */
+#tablaJuegos {
+  border-collapse: collapse;
+  width: auto;
+  color: #e8e8e8;             /* texto claro para todas las celdas */
+}
+
+/* Bordes, padding y alineación de todas las celdas */
+#tablaJuegos th,
+#tablaJuegos td {
+  border: 1px solid #444;    /* borde tenue que se ve sobre negro */
+  padding: 8px 12px;
+  text-align: left;
+}
+
+/* Cabecera destacada */
+#tablaJuegos thead th {
+  background-color: #1abc9c;  /* verde que resalta sobre el negro */
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Columna de precio: que no se parta y alineada a la derecha */
+#tablaJuegos td:last-child {
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Filas: fondo base oscuro */
+#tablaJuegos tbody tr {
+  background-color: #1e1e1e;
+}
+
+/* Filas alternas (efecto cebra), un pelín más claras */
+#tablaJuegos tbody tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+/* Resaltar la fila bajo el ratón */
+#tablaJuegos tbody tr:hover {
+  background-color: #37474f;
+}

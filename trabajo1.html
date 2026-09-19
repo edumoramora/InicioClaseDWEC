@@ -19,6 +19,16 @@
 
   <h1>Trabajo 1</h1>
   <p>Aquí irá el contenido del primer trabajo.</p>
+  <h2>Añadir un juego</h2>
+  
+  <form id="formJuego">
+    <input type="text"   id="inNombre"     placeholder="Nombre" required>
+    <input type="text"   id="inCompania"   placeholder="Compañía" required>
+    <input type="text"   id="inPlataforma" placeholder="Plataforma" required>
+    <input type="number" id="inValoracion" placeholder="Valoración" step="0.1" min="0" max="10" required>
+    <input type="number" id="inPrecio"     placeholder="Precio (€)" step="0.01" min="0" required>
+    <button type="submit">Añadir</button>
+  </form>
 
   <h2>Mis videojuegos</h2>
   <table id="tablaJuegos">
@@ -33,6 +43,6 @@
     </thead>
     <tbody id="cuerpoJuegos"></tbody>
   </table>
-  <script src="app.js"></script>
+  <script src="juegos.js"></script>
 </body>
 </html>

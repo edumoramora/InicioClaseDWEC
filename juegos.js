@@ -14,7 +14,13 @@ const juegos = [
   // --- REFERENCIAS AL DOM ---
   const cuerpoTabla = document.getElementById("cuerpoJuegos");
   // --- FUNCIONES DE FORMATO ---
+  function formatearPrecio(valor) {
+    return valor.toLocaleString("es-ES", { style: "currency", currency: "EUR" });
+  }
   
+  function formatearNota(valor) {
+    return valor.toLocaleString("es-ES"); // 9.5 -> "9,5"
+  }
   // --- PINTAR LA TABLA ---
   function pintarJuegos(lista) {
     cuerpoTabla.innerHTML = ""; // vaciamos antes, por si se vuelve a pintar
@@ -34,3 +40,26 @@ const juegos = [
 
   // --- ARRANQUE ---
   pintarJuegos(juegos);
+
+
+  const formulario = document.getElementById("formJuego");
+
+    formulario.addEventListener("submit", function (evento) {
+      evento.preventDefault(); // sin esto, la página se recarga y se pierde todo
+
+      // 1. Construimos el objeto del nuevo juego leyendo los inputs
+      const nuevoJuego = {
+        nombre:     document.getElementById("inNombre").value,
+        compania:   document.getElementById("inCompania").value,
+        plataforma: document.getElementById("inPlataforma").value,
+        valoracion: parseFloat(document.getElementById("inValoracion").value),
+        precio:     parseFloat(document.getElementById("inPrecio").value),
+      };
+
+      // 2. Lo añadimos a los DATOS y repintamos la tabla desde ellos
+      juegos.push(nuevoJuego);
+      pintarJuegos(juegos);
+
+      // 3. Limpiamos el formulario para el siguiente
+      formulario.reset();
+    });

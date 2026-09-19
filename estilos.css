@@ -1,0 +1,168 @@
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background-color: #0f1420;
+  color: #e8ecf4;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+
+#miBoton {
+  background-color: #4f8cff;   /* color de fondo azul */
+  color: white;                  /* texto en blanco */
+  border: none;                  /* quitamos el borde gris feo */
+  padding: 12px 24px;            /* espacio interior: lo hace más grande */
+  font-size: 1rem;               /* tamaño de letra */
+  border-radius: 10px;           /* esquinas redondeadas */
+  cursor: pointer;               /* el ratón muestra una manita encima */
+  margin-top: 16px;              /* separación con el texto de arriba */
+}
+
+/* Efecto al pasar el ratón por encima */
+#miBoton:hover {
+  background-color: #3a6fd6;    /* un azul un poco más oscuro */
+}
+
+h1 {
+  color: #4f8cff;
+}
+
+
+/* ---------- MENÚ PRINCIPAL ---------- */
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #171e2e;
+  padding: 14px 24px;
+  border-bottom: 2px solid #4f8cff;
+  margin: -40px -20px 24px -20px;
+}
+.menu__marca {
+  font-weight: bold;
+  color: #4f8cff;
+}
+.menu__lista {
+  display: flex;
+  gap: 10px;
+  list-style: none;   /* quita los puntos de la lista */
+  margin: 0;
+  padding: 0;
+}
+.menu__enlace {
+  color: #93a0b8;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;              /* necesario para poder agrandarlo */
+  transition: all 0.25s ease;         /* la clave: suaviza TODOS los cambios */
+}
+
+.menu__enlace:hover {
+  color: white;
+  background-color: #4f8cff;          /* se ilumina en azul */
+  transform: scale(1.2) translateY(-3px);  /* se agranda y sube un poco */
+  box-shadow: 0 6px 16px rgba(79, 140, 255, 0.5);  /* brillo/sombra azul debajo */
+}
+
+body.tema-claro {
+  background-color: #f0f2f7;
+  color: #1a1a2e;
+}
+body.tema-claro #menu {
+  background-color: #ffffff;
+}
+body.tema-claro h1 {
+  color: #2a5fd0;
+}
+
+
+/* --- Tabla de videojuegos (tema oscuro) --- */
+#tablaJuegos {
+  border-collapse: collapse;
+  width: auto;
+  color: #e8e8e8;             /* texto claro para todas las celdas */
+}
+
+/* Bordes, padding y alineación de todas las celdas */
+#tablaJuegos th,
+#tablaJuegos td {
+  border: 1px solid #444;    /* borde tenue que se ve sobre negro */
+  padding: 8px 12px;
+  text-align: left;
+}
+
+/* Cabecera destacada */
+#tablaJuegos thead th {
+  background-color: #1abc9c;  /* verde que resalta sobre el negro */
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Columna de precio: que no se parta y alineada a la derecha */
+#tablaJuegos td:last-child {
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Filas: fondo base oscuro */
+#tablaJuegos tbody tr {
+  background-color: #1e1e1e;
+}
+
+/* Filas alternas (efecto cebra), un pelín más claras */
+#tablaJuegos tbody tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+/* Resaltar la fila bajo el ratón */
+#tablaJuegos tbody tr:hover {
+  background-color: #37474f;
+}
+
+/* --- Formulario para añadir juegos --- */
+#formJuego {
+  display: flex;
+  flex-wrap: wrap;        /* en pantallas estrechas los campos bajan de línea */
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#formJuego input {
+  flex: 1;                /* que se repartan el ancho */
+  min-width: 140px;       /* pero sin quedarse diminutos */
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 9px 12px;
+  color: #e8e8e8;
+  font-size: 14px;
+}
+
+#formJuego input::placeholder {
+  color: #8a8f98;
+}
+
+/* Resaltado al hacer clic en un campo, con el verde de la tabla */
+#formJuego input:focus {
+  outline: none;
+  border-color: #1abc9c;
+  box-shadow: 0 0 0 2px rgba(26, 188, 156, 0.25);
+}
+
+#formJuego button {
+  background-color: #1abc9c;
+  color: #06231f;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#formJuego button:hover {
+  background-color: #16a085;
+}
